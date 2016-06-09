@@ -1,0 +1,33 @@
+This is my implementation of the ForkMergeSort extra credit project.
+
+It sorts a list of floats fed in as commandline arguments using mergesort.
+
+Each time there is a division a fork is called and ForkMergeSort is called in
+
+the child process which will then write it's result into a pipe that is then
+
+read from by the parent who will merge the two halves. In this way my
+
+implementation is recursive. I have included a Makefile, so calling the make
+
+function is all that is needed when it comes to compiling. As stated early the 
+
+list of floats to be sorted are fed into the commandline. To call the program
+
+simply input "./ForkMergeSort [list of floats]" into the terminal commandline.
+
+An example of a call would be "./ForkMergeSort 20.3 -7.4 8.6 5 10.3 -9 0". 
+
+This should return
+
+-9
+-7.4
+0
+5
+8.6
+10.3
+20.3
+
+As you can see the values of the list are printed low to high from top to
+
+bottom respectively.
